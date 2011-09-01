@@ -3,7 +3,7 @@
 Plugin Name: Genesis Title Toggle
 Plugin URI: http://www.billerickson.net/
 Description: Turn on/off page titles on a per page basis, and set sitewide defaults from Theme Settings. Must be using the Genesis theme.
-Version: 1.0
+Version: 1.1
 Author: Bill Erickson
 Author URI: http://www.billerickson.net
 License: GPLv2
@@ -19,6 +19,9 @@ class BE_Title_Toggle {
 	}
 	
 	function init() {
+		// Translations
+		load_plugin_textdomain( 'genesis-title-toggle', false, basename( dirname( __FILE__ ) ) . '/languages' );
+
 		// Metabox on Theme Settings, for Sitewide Default
 		add_filter( 'genesis_theme_settings_defaults', array( $this, 'setting_defaults' ) );
 		add_action( 'genesis_settings_sanitizer_init', array( $this, 'sanitization' ) );
@@ -39,7 +42,7 @@ class BE_Title_Toggle {
 	function activation_hook() {
 		if ( 'genesis' != basename( TEMPLATEPATH ) ) {
 			deactivate_plugins( plugin_basename( __FILE__ ) );
-			wp_die( 'Sorry, you can\'t activate unless you have installed <a href="http://www.billerickson.net/get-genesis">Genesis</a>' );
+			wp_die( sprintf( __( 'Sorry, you can&rsquo;t activate unless you have installed <a href="%s">Genesis</a>', 'genesis-title-toggle'), 'http://www.billerickson.net/get-genesis' ) );
 		}
 	}
 	
@@ -80,7 +83,7 @@ class BE_Title_Toggle {
 	 */
 	
 	function register_metabox( $_genesis_theme_settings_pagehook ) {
-		add_meta_box('be-title-toggle', 'Title Toggle', array( $this, 'create_sitewide_metabox' ), $_genesis_theme_settings_pagehook, 'main', 'high');
+		add_meta_box('be-title-toggle', __( 'Title Toggle', 'genesis-title-toggle' ), array( $this, 'create_sitewide_metabox' ), $_genesis_theme_settings_pagehook, 'main', 'high');
 	}
 	
 	/**
@@ -91,7 +94,7 @@ class BE_Title_Toggle {
 	function create_sitewide_metabox() {
 		$post_types = apply_filters( 'be_title_toggle_post_types', array( 'page' ) );
 		foreach ( $post_types as $post_type )
-			echo '<p><input type="checkbox" name="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']" id="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']" value="1" ' . checked( 1, genesis_get_option( 'be_title_toggle_' . $post_type ), false ) .' /> <label for="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']"> By default, remove titles in the <strong>' . $post_type . '</strong> post type.</label></p>';
+			echo '<p><input type="checkbox" name="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']" id="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']" value="1" ' . checked( 1, genesis_get_option( 'be_title_toggle_' . $post_type ), false ) .' /> <label for="' . GENESIS_SETTINGS_FIELD . '[be_title_toggle_' . $post_type . ']"> ' . sprintf( __( 'By default, remove titles in the <strong>%s</strong> post type.', 'genesis-title-toggle' ), $post_type ) .'</label></p>';
 
 	
 	}
@@ -125,15 +128,15 @@ class BE_Title_Toggle {
 		if ( !empty( $show ) ) {
 			$meta_boxes[] = array(
 				'id' => 'be_title_toggle_show',
-				'title' => 'Title Toggle',
+				'title' => __( 'Title Toggle', 'genesis-title-toggle' ),
 				'pages' => $show,
 				'context' => 'normal',
 				'priority' => 'high',
 				'show_names' => true,
 				'fields' => array(
 					array(
-						'name' => 'Show Title',
-						'desc' => 'By default, this post type is set to remove titles. This checkbox lets you show this specific page\'s title',
+						'name' => __( 'Show Title', 'genesis-title-toggle' ),
+						'desc' => __( 'By default, this post type is set to remove titles. This checkbox lets you show this specific page&rsquo;s title', 'genesis-title-toggle' ),
 						'id' => 'be_title_toggle_show',
 						'type' => 'checkbox'
 					)
@@ -144,15 +147,15 @@ class BE_Title_Toggle {
 		if ( !empty( $hide ) ) {
 			$meta_boxes[] = array(
 				'id' => 'be_title_toggle_hide',
-				'title' => 'Title Toggle',
+				'title' => __( 'Title Toggle', 'genesis-title-toggle' ),
 				'pages' => $hide,
 				'context' => 'normal',
 				'priority' => 'high',
 				'show_names' => true,
 				'fields' => array(
 					array(
-						'name' => 'Hide Title',
-						'desc' => 'By default, this post type is set to display titles. This checkbox lets you hide this specific page\'s title',
+						'name' => __( 'Hide Title', 'genesis-title-toggle' ),
+						'desc' => __( 'By default, this post type is set to display titles. This checkbox lets you hide this specific page&rsquo;s title', 'genesis-title-toggle' ),
 						'id' => 'be_title_toggle_hide',
 						'type' => 'checkbox'
 					)
