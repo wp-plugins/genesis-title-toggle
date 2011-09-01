@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Genesis Title Toggle\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/genesis-title-toggle\n"
 "POT-Creation-Date: 2011-09-01 13:09+0100\n"
-"PO-Revision-Date: 2011-09-01 15:31+0100\n"
+"PO-Revision-Date: 2011-09-01 23:11+0100\n"
 "Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
 "Language-Team: DECKERWEB <deckerweb.mobil@googlemail.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,39 +19,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #@ genesis-title-toggle
-#: genesis-title-toggle.php:49
-msgid "Sorry, you can‘t activate unless you have installed <a href=\"http://www.billerickson.net/get-genesis\">Genesis</a>"
-msgstr "Entschuldigung, aber Sie k&ouml;nnen dieses Plugin nicht aktivieren, solange Sie das <a href=\"http://www.billerickson.net/get-genesis\">Genesis Framework</a> nicht installiert haben."
-
-#@ genesis-title-toggle
-#: genesis-title-toggle.php:101
-msgid "By default, remove titles in this post type:"
-msgstr "Standardm&auml;&szlig;ig werden die Titel f&uuml;r diesen Inhaltstyp (Post Type) entfernt/ ausgeblendet:"
-
-#@ genesis-title-toggle
-#: genesis-title-toggle.php:90
-#: genesis-title-toggle.php:135
-#: genesis-title-toggle.php:154
+#: genesis-title-toggle.php:86
+#: genesis-title-toggle.php:131
+#: genesis-title-toggle.php:150
 msgid "Title Toggle"
 msgstr "Seitentitelanzeige"
 
 #@ genesis-title-toggle
-#: genesis-title-toggle.php:142
+#: genesis-title-toggle.php:138
 msgid "Show Title"
 msgstr "Seitentitel anzeigen"
 
 #@ genesis-title-toggle
-#: genesis-title-toggle.php:143
-msgid "By default, this post type is set to remove titles. This checkbox lets you show this specific page`s title"
-msgstr "Standardm&auml;&szlig;ig ist dieser Inhaltstyp (Post Type) so eingestellt, dass die Seitentitel entfernt werden. Diese Checkbox erm&ouml;glicht es Ihnen, f&uuml;r diese Seite den Titel dennoch anzeigen zu lassen."
-
-#@ genesis-title-toggle
-#: genesis-title-toggle.php:161
+#: genesis-title-toggle.php:157
 msgid "Hide Title"
 msgstr "Seitentitel verbergen"
 
 #@ genesis-title-toggle
-#: genesis-title-toggle.php:162
-msgid "By default, this post type is set to display titles. This checkbox lets you hide this specific page`s title"
-msgstr "Standardm&auml;&szlig;ig ist dieser Inhaltstyp (Post Type) so eingestellt, dass die Seitentitel angezeigt werden. Diese Checkbox erm&ouml;glicht es Ihnen, f&uuml;r diese Seite den Titel dennoch verbergen zu lassen."
+#: genesis-title-toggle.php:45
+#, php-format
+msgid "Sorry, you can&rsquo;t activate unless you have installed <a href=\"%s\">Genesis</a>"
+msgstr "Hinweis: Sie k&ouml;nnen dieses Plugin <em>nicht</em> aktivieren, solange das <a href=\"%s\">Genesis Framework</a> nicht installiert ist."
+
+#@ genesis-title-toggle
+#: genesis-title-toggle.php:97
+#, php-format
+msgid "By default, remove titles in the <strong>%s</strong> post type."
+msgstr "Standardm&auml;&szlig;ig werden die Titel f&uuml;r den Inhaltstyp (Post Type) <strong>%s</strong> entfernt."
+
+#@ genesis-title-toggle
+#: genesis-title-toggle.php:139
+msgid "By default, this post type is set to remove titles. This checkbox lets you show this specific page&rsquo;s title"
+msgstr "Standardm&auml;&szlig;ig ist dieser Inhaltstyp (Post Type) so eingestellt, dass die Seitentitel entfernt werden. Mit dem Setzen dieser Einstellung, wird der Titel f&uuml;r diese Seite dennoch angezeigt."
+
+#@ genesis-title-toggle
+#: genesis-title-toggle.php:158
+msgid "By default, this post type is set to display titles. This checkbox lets you hide this specific page&rsquo;s title"
+msgstr "Standardm&auml;&szlig;ig ist dieser Inhaltstyp (Post Type) so eingestellt, dass die Seitentitel angezeigt werden. Mit dem Setzen dieser Einstellung, wird der Titel f&uuml;r diese Seite dennoch entfernt."
 
