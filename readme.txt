@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, genesiswp, title, 
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 Turn on/off page titles on a per page basis, and set sitewide defaults from Theme Settings. Must be using the Genesis theme.
 
@@ -37,6 +37,9 @@ Finally, if you're comfortable with code you can use the `be_title_toggle_post_t
 3. If you check "hide" on Theme Settings, this metabox is displayed on the Edit screen.
 
 == Changelog ==
+
+= 1.2.1 = 
+* Typo in 1.2 caused the plugin to crash. I'm so sorry!
 
 = 1.2 =
 * Fixed an issue where if you weren't running Genesis, site breaks (ex: WP Touch changes themes when on mobile device)
