@@ -3,7 +3,7 @@
 Plugin Name: Genesis Title Toggle
 Plugin URI: http://www.billerickson.net/
 Description: Turn on/off page titles on a per page basis, and set sitewide defaults from Theme Settings. Must be using the Genesis theme.
-Version: 1.2.2
+Version: 1.2.3
 Author: Bill Erickson
 Author URI: http://www.billerickson.net
 License: GPLv2
@@ -111,7 +111,7 @@ class BE_Title_Toggle {
 	
 		// Make sure we're still in Genesis, plugins like WP Touch need this check
 		if ( !function_exists( 'genesis_get_option' ) )
-			return;
+			return $meta_boxes;
 
 		
 		// Get all post types used by plugin and split them up into show and hide.

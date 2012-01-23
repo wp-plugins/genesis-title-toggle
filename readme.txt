@@ -38,6 +38,9 @@ Finally, if you're comfortable with code you can use the `be_title_toggle_post_t
 
 == Changelog ==
 
+= 1.2.3 = 
+* The fix in 1.2.2 didn't make it for some reason, so re-patching it.
+
 = 1.2.2 =
 * Minor modification to the way it detects Genesis. Upgrading is only necessary if you're using Premise
 
