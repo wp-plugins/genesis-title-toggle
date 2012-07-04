@@ -3,8 +3,8 @@ Contributors: billerickson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EDYM76U6BTE5L
 Tags: genesis, genesiswp, title, 
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 1.2.3
+Tested up to: 3.4.1
+Stable tag: 1.3
 
 Turn on/off page titles on a per page basis, and set sitewide defaults from Theme Settings. Must be using the Genesis theme.
 
@@ -15,6 +15,8 @@ This plugin lets you easily remove the page title from specific pages. Don't wan
 You can also set sitewide defaults. If you don't want page titles on any pages, go to Genesis > Theme Settings > Title Toggle and check the appropriate box. Once a post type has the default set to remove, when editing a page you can selectively turn on that page's title.
 
 Finally, if you're comfortable with code you can use the `be_title_toggle_post_types` filter to change the post types this applies to (it only applies to pages by default). 
+
+[Support Forum](https://github.com/billerickson/Genesis-Title-Toggle/issues)
 
 
 == Installation ==
@@ -37,6 +39,9 @@ Finally, if you're comfortable with code you can use the `be_title_toggle_post_t
 3. If you check "hide" on Theme Settings, this metabox is displayed on the Edit screen.
 
 == Changelog ==
+
+= 1.3 =
+* Updated the metabox library to latest version
 
 = 1.2.3 = 
 * The fix in 1.2.2 didn't make it for some reason, so re-patching it.
