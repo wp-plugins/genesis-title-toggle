@@ -10,6 +10,8 @@ Turn on/off page titles on a per page basis, and set sitewide defaults from Them
 
 == Description ==
 
+This plugin requires the [Genesis theme framework](http://www.billerickson.net/go/genesis).
+
 This plugin lets you easily remove the page title from specific pages. Don't want "Home" at the top of your homepage? Activate, then edit the homepage and check "Hide".
 
 You can also set sitewide defaults. If you don't want page titles on any pages, go to Genesis > Theme Settings > Title Toggle and check the appropriate box. Once a post type has the default set to remove, when editing a page you can selectively turn on that page's title.
